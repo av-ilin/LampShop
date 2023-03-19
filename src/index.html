@@ -10,6 +10,119 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+        <nav class="nav">
+            <div class="container">
+                <img class="nav__logo" src="images/logo.svg" alt="logo" />
+                <div class="nav__menu">
+                    <a class="nav__menu-item" href="#">Collesctions</a>
+                    <a class="nav__menu-item" href="#">blog</a>
+                    <a class="nav__menu-item" href="#">About</a>
+                    <a class="nav__menu-item" href="#">contacts</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="shop">
+            <div class="container">
+                <div class="shop__content">
+                    <p class="shop__content-desc">
+                        Collection of lighting is inspired by the geometric
+                        works of the great Suprematist artists Kissitzky and
+                        Kazimir Malevich.
+                        <br />
+                        <br />
+                        Suprematism is a modernist movement in the art of the
+                        early twentieth century, focused on the basic geometric
+                        forms, such as circles, squares, lines and rectangles.
+                        The geometric structure of the lamps will always look
+                        like a small art objects in your house.
+                    </p>
+
+                    <hr />
+
+                    <div class="shop__collection">
+                        <div class="shop__collection-ellipse"></div>
+
+                        <img
+                            class="shop__collection-lamp"
+                            id="lampReview"
+                            src="images/example__lamp.png"
+                            alt="lamp"
+                        />
+
+                        <div class="shop__collection-desc">
+                            <p>
+                                <b>Material:</b>
+                                <span id="material"> Metal </span>
+                            </p>
+                            <br />
+                            <p>
+                                <b>Dimensions (cm):</b>
+                                <span id="dimensions">H 45 x W 12 x D 12</span>
+                            </p>
+                            <br />
+                            <p>
+                                <b>Weight:</b>
+                                <span id="weight">2,4 kg</span>
+                            </p>
+                            <br />
+                            <p>
+                                <b>Electrification:</b>
+                                <br />
+                                <span id="electrification">
+                                    LED 10W | G9 | 220-240V | 50 Hz
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="collection__items" id="lampsBox">
+                            <div class="collection__items-box">
+                                <div class="collection__item active">
+                                    <img
+                                        src="images/example__lamp.png"
+                                        alt="lamp"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="collection__list-switchers">
+                                <div class="collection__switchers-switch">
+                                    <img
+                                        src="images/icon_light.svg"
+                                        alt="icon sun"
+                                    />
+                                </div>
+
+                                <div class="collection__switchers-switch">
+                                    <img
+                                        src="images/icon_dark.svg"
+                                        alt="icon moon"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop__interier">
+                    <img
+                        class="shop__interier-lamp"
+                        id="lampInterier"
+                        src="images/example__lamp.png"
+                        alt="lamp"
+                    />
+                    <img
+                        class="shop__interier-room"
+                        id="interier"
+                        src="images/interier_light.png"
+                        alt="room"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <script src="js/api.js"></script>
+        <script src="js/lamp.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
