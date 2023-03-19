@@ -112,8 +112,13 @@ a {
     max-width: 250px;
     max-height: 580px;
 }
+.shop__collection-lamp.load {
+    width: 100px;
+    top: 30px;
+}
 
 .shop__collection-desc {
+    position: relative;
     padding-top: 158px;
     font-weight: 400;
     font-size: 16px;
@@ -121,9 +126,27 @@ a {
     letter-spacing: 0.055em;
     color: #000000;
 }
+.shop__collection-desc p {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+.shop__collection-desc.load p {
+    opacity: 0;
+}
+.shop__collection-desc img {
+    position: absolute;
+    width: 172px;
+    left: 55px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.shop__collection-desc.load img {
+    opacity: 1;
+}
 
 .shop__collection-desc span {
     font-weight: 100;
+    text-transform: capitalize;
 }
 
 .collection__items {
@@ -188,17 +211,17 @@ a {
     cursor: pointer;
     width: 50%;
     height: 76px;
+    background: #94a6a6;
+    fill: white;
+    transition: all 0.4s ease-in-out;
 }
-.collection__switchers-switch img {
+.collection__switchers-switch.active {
+    background: #fff3da;
+    fill: black;
+}
+.collection__switchers-switch svg {
     width: 32px;
     height: 32px;
-}
-.collection__switchers-switch:first-child {
-    background: #fff3da;
-}
-
-.collection__switchers-switch:last-child {
-    background: #94a6a6;
 }
 
 /* #endregion */
@@ -214,6 +237,10 @@ a {
     left: 214px;
     max-width: 150px;
     max-height: 360px;
+}
+.shop__interier-lamp.load {
+    top: 30px;
+    width: 100px;
 }
 
 .shop__interier-room {

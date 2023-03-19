@@ -1,10 +1,16 @@
 class LampApi {
     static get URL() {
-        return "https://polls.apiblueprint.org/";
+        return "https://private-anon-e05495aa0f-lampshop.apiary-mock.com/";
     }
 
-    static get lamps() {
+    static async get() {
         let url = new URL(LampApi.URL + "lamps");
-        return url;
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        return await response.json();
     }
 }
