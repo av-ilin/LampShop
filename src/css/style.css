@@ -253,8 +253,8 @@ a {
     position: absolute;
     width: 150px;
     height: 150px;
-    left: 191px;
-    top: 303px;
+    /* left: 191px; */
+    /* top: 303px; */
     opacity: 0;
     filter: blur(20px);
     border-radius: 50%;
