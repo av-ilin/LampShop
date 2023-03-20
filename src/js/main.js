@@ -3,33 +3,29 @@ LampManager.update();
 const switchLight = document.getElementsByClassName(
     "collection__switchers-switch"
 )[0];
-
 const switchDark = document.getElementsByClassName(
     "collection__switchers-switch"
 )[1];
-
 const lighter = document.getElementsByClassName("shop__interier-lighter")[0];
 
+let lightMode = true;
+
 switchLight.onclick = () => {
-    if (!switchLight.classList.contains("active"))
+    if (!lightMode) {
         switchLight.classList.add("active");
-
-    if (switchDark.classList.contains("active"))
         switchDark.classList.remove("active");
-
-    if (lighter.classList.contains("active"))
         lighter.classList.remove("active");
-
-    LampManager.elems.interier.src = "images/interier_light.png";
+        LampManager.elems.interier.src = "images/interier_light.png";
+        lightMode = true;
+    }
 };
 
 switchDark.onclick = () => {
-    if (switchLight.classList.contains("active"))
+    if (lightMode) {
         switchLight.classList.remove("active");
-    if (!switchDark.classList.contains("active"))
         switchDark.classList.add("active");
-
-    if (!lighter.classList.contains("active")) lighter.classList.add("active");
-
-    LampManager.elems.interier.src = "images/interier_mydark.png";
+        lighter.classList.add("active");
+        LampManager.elems.interier.src = "images/interier_mydark.png";
+        lightMode = false;
+    }
 };

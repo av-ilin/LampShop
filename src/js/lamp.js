@@ -1,4 +1,21 @@
 class LampManager {
+    static loaderSrc = "images/loader.gif";
+
+    static activeLamp = 0;
+
+    static elems = {
+        lampsBox: document.getElementById("lampsBox"),
+        lampReview: document.getElementById("lampReview"),
+        lampInterier: document.getElementById("lampInterier"),
+        interier: document.getElementById("interier"),
+        lampDesc: document.getElementById("lampDesc"),
+
+        material: document.getElementById("material"),
+        dimensions: document.getElementById("dimensions"),
+        weight: document.getElementById("weight"),
+        electrification: document.getElementById("electrification"),
+    };
+
     static update() {
         LampManager.loadOn();
         LampApi.get().then((data) => {
@@ -68,10 +85,6 @@ class LampManager {
         });
     }
 
-    static loaderSrc = "images/loader.gif";
-
-    static activeLamp = 0;
-
     static loadOn() {
         console.log("start load");
     }
@@ -81,17 +94,4 @@ class LampManager {
         LampManager.elems.lampsBox.children[0].onclick();
         console.log("end load");
     }
-
-    static elems = {
-        lampsBox: document.getElementById("lampsBox"),
-        lampReview: document.getElementById("lampReview"),
-        lampInterier: document.getElementById("lampInterier"),
-        interier: document.getElementById("interier"),
-        lampDesc: document.getElementById("lampDesc"),
-
-        material: document.getElementById("material"),
-        dimensions: document.getElementById("dimensions"),
-        weight: document.getElementById("weight"),
-        electrification: document.getElementById("electrification"),
-    };
 }
