@@ -10,7 +10,7 @@ class LampManager {
                 let item = document.createElement("div");
                 item.className = "collection__item";
                 item.append(img);
-                let imageSrc = "images/loader.gif";
+                let imageSrc = LampManager.loaderSrc;
                 img.src = imageSrc;
 
                 fetch(lamp.image)
@@ -43,6 +43,20 @@ class LampManager {
                     LampManager.elems.weight.textContent = `${lamp.weight} kg`;
                     LampManager.elems.electrification.textContent =
                         lamp.electrification;
+
+                    if (
+                        imageSrc == LampManager.loaderSrc &&
+                        !LampManager.elems.lampReview.classList.contains("load")
+                    ) {
+                        LampManager.elems.lampReview.classList.add("load");
+                        LampManager.elems.lampInterier.classList.add("load");
+                    } else if (
+                        imageSrc != LampManager.loaderSrc &&
+                        LampManager.elems.lampReview.classList.contains("load")
+                    ) {
+                        LampManager.elems.lampReview.classList.remove("load");
+                        LampManager.elems.lampInterier.classList.remove("load");
+                    }
                     LampManager.elems.lampReview.src = imageSrc;
                     LampManager.elems.lampInterier.src = imageSrc;
                 };
@@ -54,6 +68,8 @@ class LampManager {
         });
     }
 
+    static loaderSrc = "images/loader.gif";
+
     static activeLamp = 0;
 
     static loadOn() {
@@ -61,9 +77,9 @@ class LampManager {
     }
 
     static loadOff() {
-        console.log("end load");
         LampManager.elems.lampDesc.classList.remove("load");
         LampManager.elems.lampsBox.children[0].onclick();
+        console.log("end load");
     }
 
     static elems = {
