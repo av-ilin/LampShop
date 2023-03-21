@@ -98,7 +98,7 @@ class LampManager {
             LampManager.elems.lampReview.src = imageSrc;
             LampManager.elems.lampInterier.src = imageSrc;
 
-            Lighter.check();
+            Lighter.switch();
             setTimeout(() => {
                 Lighter.upd();
             }, 100);

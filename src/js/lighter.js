@@ -34,7 +34,7 @@ class Lighter {
         };
     }
 
-    static check() {
+    static switch() {
         Lighter.switcherLight.onclick();
     }
 

@@ -108,7 +108,7 @@ a {
 
 .shop__collection-lamp {
     position: absolute;
-    right: 255px;
+    left: 250px;
     max-width: 250px;
     max-height: 580px;
 }
@@ -245,6 +245,7 @@ a {
 }
 
 .shop__interier-room {
+    width: 100%;
     border-radius: 18px;
     box-shadow: -278px 223px 16px -272px rgba(0, 0, 0, 0.25);
 }
@@ -293,3 +294,97 @@ a {
 /* #endregion */
 
 /* #endregion */
+
+@media (max-width: 1600px) {
+    .shop,
+    .container {
+        max-width: 1440px;
+    }
+
+    .shop .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .shop__content-desc {
+        margin: 80px auto;
+        width: 90%;
+        text-align: center;
+    }
+    .collection__items {
+        margin-top: 25px;
+        border-radius: 15px;
+    }
+    .shop__interier {
+        width: fit-content;
+    }
+    .shop__interier-room {
+        box-shadow: none;
+    }
+    .shop__collection-lamp {
+        left: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .shop__content-desc {
+        font-size: 20px;
+    }
+
+    .shop__interier {
+        max-width: 95%;
+        font-size: 10vw;
+    }
+    .shop__collection-lamp {
+        left: 250px;
+    }
+    .shop__interier-lamp {
+        left: 24%;
+        max-width: 18%;
+        max-height: 33%;
+    }
+    .shop__interier-lighter {
+        width: 17.2%;
+        height: 13.6%;
+    }
+    .shop__interier-lighter.active {
+        box-shadow: 0px 0px 4em 2em white;
+    }
+}
+
+@media (max-width: 630px) {
+    .shop__collection-lamp {
+        left: 0px;
+        max-height: 500px;
+        max-width: 40%;
+    }
+
+    .shop__content-desc {
+        font-size: 14px;
+    }
+
+    .shop__collection-desc {
+        padding-top: 600px;
+    }
+    .shop__collection-ellipse {
+        top: 460px;
+    }
+    .collection__items {
+        height: fit-content;
+        position: absolute;
+        right: 0px;
+        max-width: 169px;
+        width: 30%;
+    }
+    .collection__item {
+        width: 90%;
+        height: 90%;
+    }
+    .collection__items-box {
+        margin-bottom: 10px;
+    }
+}
