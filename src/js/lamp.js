@@ -29,9 +29,8 @@ class LampManager {
             return;
         }
 
-        LampManager.data = data;
-
         console.log(data);
+        LampManager.data = data;
         LampManager._status.data = true;
         LampManager._status.images = new Array(data.length, false);
 
