@@ -20,6 +20,7 @@ class Lighter {
                 Lighter.switcherDark.classList.remove("active");
                 Lighter.lighter.classList.remove("active");
                 Lighter.isLight = true;
+                Lighter.upd();
             }
         };
 
@@ -30,6 +31,7 @@ class Lighter {
                 Lighter.switcherDark.classList.add("active");
                 Lighter.lighter.classList.add("active");
                 Lighter.isLight = false;
+                Lighter.upd();
             }
         };
     }
