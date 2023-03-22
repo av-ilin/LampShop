@@ -334,7 +334,7 @@ a {
         max-width: 1440px;
     }
 
-    .nav__menu {
+    .nav .container {
         align-items: center;
     }
 
@@ -364,6 +364,9 @@ a {
 }
 
 @media (max-width: 1024px) {
+    .nav {
+        padding: 20px 0;
+    }
     .nav__logo {
         max-height: 40px;
     }
@@ -376,6 +379,7 @@ a {
         flex-basis: 100%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .shop__content-desc {
@@ -404,6 +408,13 @@ a {
 }
 
 @media (max-width: 630px) {
+    .nav {
+        padding: 10px 0;
+    }
+    .nav__logo {
+        max-height: 30px;
+    }
+
     .shop__collection-lamp {
         left: 0px;
         max-height: 500px;
@@ -411,6 +422,7 @@ a {
     }
 
     .shop__content-desc {
+        margin: 30px auto 80px;
         font-size: 14px;
     }
 
