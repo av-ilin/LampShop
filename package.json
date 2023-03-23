@@ -5,7 +5,10 @@
     "main": "src/js/main.js",
     "scripts": {
         "build": "webpack",
-        "clear": "rd /s /q dist"
+        "clear": "rd /s /q dist",
+        "server": "webpack serve",
+        "sass": "sass src/scss/style.scss src/css/style.css",
+        "sass-watch": "sass --watch src/scss:src/css"
     },
     "keywords": [],
     "author": "av-ilin",
@@ -23,10 +26,11 @@
         "postcss-loader": "^7.0.2",
         "postcss-preset-env": "^7.8.3",
         "resolve-url-loader": "^5.0.0",
-        "sass": "^1.57.1",
+        "sass": "^1.59.3",
         "sass-loader": "^13.2.0",
         "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.1"
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.1"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1"
