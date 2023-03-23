@@ -49,7 +49,7 @@ class LampManager {
         img.src = imageSrc;
 
         let item = document.createElement("div");
-        item.className = "collection__item";
+        item.className = "lamp-list__item";
         item.append(img);
 
         fetch(lamp.image)

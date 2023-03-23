@@ -1,16 +1,14 @@
 class Lighter {
     static lighter = document.getElementsByClassName(
-        "shop__interier-lighter"
+        "shop-interier__lighter"
     )[0];
     static isLight = true;
 
-    static switcherLight = document.getElementsByClassName(
-        "collection__switchers-switch"
-    )[0];
+    static switcherLight =
+        document.getElementsByClassName("lamp-list__switch")[0];
 
-    static switcherDark = document.getElementsByClassName(
-        "collection__switchers-switch"
-    )[1];
+    static switcherDark =
+        document.getElementsByClassName("lamp-list__switch")[1];
 
     static create() {
         Lighter.switcherLight.onclick = () => {
