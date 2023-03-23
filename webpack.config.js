@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     target: "web",
-    entry: ["@babel/polyfill", path.resolve(__dirname, "src", "index.html")],
+    entry: [path.resolve(__dirname, "src", "index.html"), "@babel/polyfill"],
     output: {
         path: path.resolve(__dirname, "dist"),
         clean: true,
-        filename: "[name].[contenthash].js",
+        filename: "babel.[contenthash].js",
         // assetModuleFilename: "assets/[name][ext]",
     },
     plugins: [
@@ -38,6 +38,9 @@ module.exports = {
                     },
                 },
                 type: "asset/resource",
+                generator: {
+                    filename: "js/[name].[contenthash].[ext]",
+                },
             },
 
             {
@@ -64,6 +67,9 @@ module.exports = {
                         },
                     },
                 ],
+                generator: {
+                    filename: "css/[name].[contenthash].[ext]",
+                },
             },
 
             {
