@@ -176,7 +176,7 @@ body {
 /* #endregion */
 /* #region lamp-list */
 .lamp-list {
-  margin-top: 41px;
+  margin: 40px 0 50px;
   padding-top: 20px;
   width: 169px;
   overflow: hidden;
@@ -250,6 +250,7 @@ body {
 .shop-interier {
   z-index: 2;
   position: relative;
+  align-self: flex-end;
 }
 
 .shop-interier__lamp {
@@ -316,6 +317,7 @@ body {
   }
   .shop-interier {
     width: fit-content;
+    align-self: center;
   }
   .shop-interier__room {
     box-shadow: none;
