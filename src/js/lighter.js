@@ -13,7 +13,7 @@ class Lighter {
     static create() {
         Lighter.switcherLight.onclick = () => {
             if (!Lighter.isLight && LampManager.status) {
-                LampManager.elems.interier.src = "images/interier_light.png";
+                LampManager.elems.interier.src = "images/interier_light.webp";
                 Lighter.switcherLight.classList.add("active");
                 Lighter.switcherDark.classList.remove("active");
                 Lighter.lighter.classList.remove("active");
@@ -24,7 +24,7 @@ class Lighter {
 
         Lighter.switcherDark.onclick = () => {
             if (Lighter.isLight && LampManager.status && LampManager.isDark()) {
-                LampManager.elems.interier.src = "images/interier_mydark.png";
+                LampManager.elems.interier.src = "images/interier_mydark.webp";
                 Lighter.switcherLight.classList.remove("active");
                 Lighter.switcherDark.classList.add("active");
                 Lighter.lighter.classList.add("active");
