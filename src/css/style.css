@@ -105,6 +105,8 @@ body {
 .shop-content__desc {
   margin: 80px 0;
   width: 599px;
+  overflow: scroll;
+  max-height: 288px;
   font-weight: 100;
   font-size: 24px;
   line-height: 32px;
@@ -154,6 +156,10 @@ body {
 .shop-collection__desc p {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .shop-collection__desc.load p {
   opacity: 0;
@@ -195,6 +201,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 31px;
+  scrollbar-width: none;
 }
 .lamp-list__box::-webkit-scrollbar {
   width: 0px;
@@ -304,6 +311,8 @@ body {
     gap: 40px;
   }
   .shop-content__desc {
+    max-height: none;
+    overflow: visible;
     margin: 80px auto;
     width: 90%;
     text-align: center;
